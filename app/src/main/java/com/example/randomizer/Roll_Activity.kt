@@ -4,29 +4,31 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 
 class Roll_Activity : AppCompatActivity() {
-    lateinit var RollAction:Button;
-    lateinit var ImageViewSrc:ImageView;
+    lateinit var rollAction:Button;
+    lateinit var imageViewSrc:ImageView;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_roll)
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
-        RollAction = findViewById(R.id.Roll_btn);
-        ImageViewSrc = findViewById(R.id.image_Roll);
-        RollAction.setOnClickListener{
-                RollMethod();
+        rollAction = findViewById(R.id.Roll_btn);
+        imageViewSrc = findViewById(R.id.image_Roll);
+        rollAction.setOnClickListener{
+                rollMethod();
         }
     }
-    private fun RollMethod(){
-       var numberRandom:Int = (1..6).random();
+    private fun rollMethod(){
+       val numberRandom:Int = (1..6).random();
        when(numberRandom){
-           1->ImageViewSrc.setImageResource(R.drawable.alea1);
-           2->ImageViewSrc.setImageResource(R.drawable.alea2);
-           3->ImageViewSrc.setImageResource(R.drawable.alea3);
-           4->ImageViewSrc.setImageResource(R.drawable.alea4);
-           5->ImageViewSrc.setImageResource(R.drawable.alea5);
-           6->ImageViewSrc.setImageResource(R.drawable.alea6);
+           1->imageViewSrc.setImageResource(R.drawable.alea_1);
+           2->imageViewSrc.setImageResource(R.drawable.alea_2);
+           3->imageViewSrc.setImageResource(R.drawable.alea_3);
+           4->imageViewSrc.setImageResource(R.drawable.alea_4);
+           5->imageViewSrc.setImageResource(R.drawable.alea_5);
+           6->imageViewSrc.setImageResource(R.drawable.alea_6);
        }
+
     }
 }
