@@ -31,8 +31,7 @@
             android:layout_height="130dp"
             android:scaleType="fitXY"
             android:layout_margin="15sp"
-            android:src="@drawable/alea1"
-            />
+            app:srcCompat="@drawable/alea1" />
 
         <Button
             android:id="@+id/Roll_btn"
